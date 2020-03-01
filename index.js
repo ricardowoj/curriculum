@@ -44,8 +44,12 @@ app.get('/formacao', async(request, response) => {
     })
 })
 
-app.get('/admin', (request, response) => {
-    response.render('admin/home-admin')
+app.get('/admin', (request, response, next) => {
+    if(request.hostname == 'localhost'){
+        next()
+    } else {
+        response.send("NOT ALLOWED")
+    }
 })
 
 app.get('/admin/experiencias', async(request, response) => {
