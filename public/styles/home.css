@@ -1,0 +1,19 @@
+body {
+    font-family: georgia;
+}
+
+.container img {
+    max-width: 75px;
+    width: auto;
+    margin-left: 0px;
+}
+
+.empresa {
+    float: right;
+    margin-left: 0px;
+}
+
+.rounded {
+    max-width: 400px;
+    width: auto;
+}

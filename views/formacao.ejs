@@ -1,0 +1,19 @@
+<%- include('header') %>
+
+    <link rel="stylesheet" href="styles/formacao.css">
+
+
+    <div class="card mb-3 container">
+        <% formacoes.forEach( formacoes => { %>
+        <img src="images/impacta.png" class="card-img-top rounded mx-auto d-block"" alt=" ...">
+        <div class="card-body">
+            <h5 class="card-title"><%- formacoes.curso %></h5>
+            <p class="card-text"><%- formacoes.periodo %></p>
+            <br>
+        </div>
+        <hr class="my-4">
+        <% }) %>
+    </div>
+
+
+<%- include('footer') %>

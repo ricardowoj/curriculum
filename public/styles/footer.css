@@ -1,0 +1,15 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    max-width: 40px;
+    width: auto;
+}
+
+.card-body {
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+}

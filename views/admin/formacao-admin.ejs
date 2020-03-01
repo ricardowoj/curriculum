@@ -1,0 +1,25 @@
+<%- include('header') %>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<br>
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h3 class="display-6">Currículo Vitae</h3>
+        </div>
+        <h4>Nova formação: <a href="/admin/formacao/nova"><i class="far fa-plus-square"></i></a></h4>
+        <ul>
+            <% formacoes.forEach( formacao => { %>
+            <li>
+                <%- formacao.curso %> |
+                <a href="/admin/formacao/delete/<%- formacao.id %>"><i class="fas fa-trash"></i></a>
+                <a href="/admin/formacao/editar/<%- formacao.id %>"><i class="fas fa-edit"></i></a>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+</main>
+
+<%- include('footer') %>
