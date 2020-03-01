@@ -2,8 +2,12 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 
+const path = require('path')
+
 const sqlite = require('sqlite')
 const dbConnection = sqlite.open('banco.sqlite', { Promise })
+
+const port = process.env.PORT || 3000
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
@@ -84,21 +88,10 @@ const init = async() => {
     const db = await dbConnection
     await db.run('create table if not exists experiencias (id INTEGER PRIMARY KEY, empresa TEXT, cargo TEXT, tempoCargo TEXT, descricao TEXT);')
     await db.run('create table if not exists formacoes (id INTEGER PRIMARY KEY, curso TEXT, periodo TEXT);')
-
-    //const curso = 'Análise e Desenvolvimento de Sistemas'
-    //const periodo = 'Cursando o 2º período'
-
-    //const empresa = 'Atento Brasil S/A'
-    //const cargo = 'Analista de atendimento'
-    //const tempoCargo = 'Agosto de 2015 - até dias atuais (4 anos e 8 meses)'
-    //const descricao = ' Relatórios sobre as suas atividades mensais, participar de treinamentos e garantir a efetividade e aderência, realizar os lançamentos de dados de clientes e comerciais referentes aos contratos, elaboração do controle e acompanhamento de planilhas. Realização do atendimento ao cliente com qualidade, no prazo estabelecido, solucionando os problemas de maneira estrutural e contribuindo para que ele tenha a melhor experiência. Controle de contrato, análise crítica e performance de equipe.Responsável por programar e analisar indicadores orientando a equipe de atendimento, visando propor e analisar soluções.'
-
-   //await db.run(`insert into experiencias(empresa, cargo, tempoCargo, descricao) values('${empresa}', '${cargo}', '${tempoCargo}', '${descricao}')`)
-    //await db.run(`insert into formacoes(curso, periodo) values('${curso}', '${periodo}')`)
 }
 init()
 
-app.listen(3000, (erro) => {
+app.listen(port, (erro) => {
     if(erro){
         console.log('Não foi possível carregar o servidor...')
     }else{
