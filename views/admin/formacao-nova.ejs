@@ -1,0 +1,49 @@
+<%- include('header') %>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<br>
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h3 class="display-6">Currículo Vitae</h3>
+        </div>
+        <br>
+        <h4>Nova formação</h4>
+        <br>
+        <form method="post">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Escola:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Insira o nome da escola"
+                    aria-describedby="basic-addon1" name="escola">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Curso:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Insira o seu curso"
+                    aria-describedby="basic-addon1" name="curso">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Período:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Insira o período que estudou."
+                    aria-describedby="basic-addon1" name="periodo">
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Data:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Data em que estudou na escola" name="data"></input>
+            </div>
+            <br>
+            <button class="btn btn-primary" type="submit">Salvar</button>
+        </form>
+    </div>
+</main>
+
+<%- include('footer') %>

@@ -14,8 +14,8 @@
             <% experiencias.forEach( experiencia => { %>
             <li>
                 <%- experiencia.empresa %> |
-                <a href="/admin/experiencias/delete/<%- experiencia.id %>"><i class="fas fa-trash"></i></a>
-                <a href="/admin/experiencias/editar/<%- experiencia.id %>"><i class="fas fa-edit"></i></a>
+                <a href="/admin/experiencia/delete/<%- experiencia.id %>"><i class="fas fa-trash"></i></a>
+                <a href="/admin/experiencia/editar/<%- experiencia.id %>"><i class="fas fa-edit"></i></a>
             </li>
             <% }) %>
         </ul>

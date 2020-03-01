@@ -2,18 +2,18 @@
 
     <link rel="stylesheet" href="styles/formacao.css">
 
-
     <div class="card mb-3 container">
-        <% formacoes.forEach( formacoes => { %>
-        <img src="images/impacta.png" class="card-img-top rounded mx-auto d-block"" alt=" ...">
+        <% formacoes.forEach( formacao => { %>
         <div class="card-body">
-            <h5 class="card-title"><%- formacoes.curso %></h5>
-            <p class="card-text"><%- formacoes.periodo %></p>
             <br>
+            <img src="images/<%- formacao.escola %>.png" class="align-self-center mr-3" class="img-fluid" alt="Responsive image" alt="imagem-<%= formacao.escola %>">
+            <h5 class="card-title"><%= formacao.escola %></h5>
+            <p class="card-text"><%= formacao.curso %></p>
+            <p class="card-text"><%= formacao.periodo %></p>
+            <p class="card-text"><%= formacao.data %></p>
         </div>
         <hr class="my-4">
         <% }) %>
     </div>
-
 
 <%- include('footer') %>

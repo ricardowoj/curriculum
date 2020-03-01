@@ -1,0 +1,46 @@
+<%- include('header') %>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<br>
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h3 class="display-6">Currículo Vitae</h3>
+        </div>
+        <br>
+        <h4>Nova experiência</h4>
+        <br>
+        <form method="post">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Empresa:</span>
+                </div>
+                <input type="text" class="form-control" value="<%= experiencias.empresa %>" name="empresa">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Cargo:</span>
+                </div>
+                <input type="text" class="form-control" value="<%= experiencias.cargo %>" name="cargo">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Tempo no cargo:</span>
+                </div>
+                <input type="text" class="form-control" value="<% experiencias.tempoCargo %>" name="tempoCargo">
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Descrição:</span>
+                </div>
+                <textarea class="form-control" value="<%= experiencias.descricao %>" name="descricao"></textarea>
+            </div>
+            <br>
+            <button class="btn btn-primary" type="submit">Salvar</button>
+        </form>
+    </div>
+</main>
+
+<%- include('footer') %>
