@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "Curriculum Ricardo Wojciechowski",
   "main": "index.js",
-  "devDependencies": {},
+  "engines": {
+    "node": "^12"
+  },
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ricardo Wojciechowski",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^3.0.1",
