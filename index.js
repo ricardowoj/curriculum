@@ -34,7 +34,7 @@ app.get('/experiencias', async(request, response) => {
 })
 
 // View Formacao
-app.get('/formacao', async(request, response) => {
+app.get('/formacoes', async(request, response) => {
     const db = await dbConnection
     const formacoesDb = await db.all('select * from formacoes;')
     const formacoes = formacoesDb.map(cat => {
