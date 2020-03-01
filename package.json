@@ -1,7 +1,7 @@
 {
-  "name": "curriculumricardo",
+  "name": "curriculum",
   "version": "1.0.0",
-  "description": "Curriculum de Ricardo Wojciechowski",
+  "description": "Curriculum Ricardo Wojciechowski",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -12,7 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ricardo Wojciechowski",
