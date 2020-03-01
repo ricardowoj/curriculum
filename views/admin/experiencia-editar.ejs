@@ -10,7 +10,7 @@
             <h3 class="display-6">Currículo Vitae</h3>
         </div>
         <br>
-        <h4>Nova experiência</h4>
+        <h4>Editar experiência</h4>
         <br>
         <form method="post">
             <div class="input-group mb-3">
@@ -29,13 +29,13 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Tempo no cargo:</span>
                 </div>
-                <input type="text" class="form-control" value="<% experiencias.tempoCargo %>" name="tempoCargo">
+                <input type="text" class="form-control" value="<%= experiencias.tempoCargo %>" name="tempoCargo">
             </div>
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Descrição:</span>
                 </div>
-                <textarea class="form-control" value="<%= experiencias.descricao %>" name="descricao"></textarea>
+                <textarea class="form-control" placeholder="" name="descricao"><%= experiencias.descricao %></textarea>
             </div>
             <br>
             <button class="btn btn-primary" type="submit">Salvar</button>

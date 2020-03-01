@@ -42,7 +42,7 @@ app.get('/formacoes', async(request, response) => {
             ...cat
         }
     })
-    response.render('formacao', {
+    response.render('formacoes', {
         formacoes
     })
 })
