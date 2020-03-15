@@ -1,20 +1,24 @@
 <%- include('header') %>
 
-<link rel="stylesheet" href="styles/formacao.css">
+<section class="cards">
 
-<div class="card mb-3 container">
     <% formacoes.forEach( formacao => { %>
-    <div class="card-body col-md-6 offset-md-3">
-        <br>
-        <img src="images/<%- formacao.escola %>.png" class="align-self-center mr-3" class="img-fluid"
-            alt="Responsive image" alt="imagem-<%= formacao.escola %>">
-        <h5 class="card-title"><%= formacao.escola %></h5>
-        <p class="card-text"><%= formacao.curso %></p>
-        <p class="card-text"><%= formacao.periodo %></p>
-        <p class="card-text"><%= formacao.data %></p>
+    <div class="card">
+        <div class="card_image-container">
+            <img src="images/<%- formacao.escola %>.png"" alt=" Responsive image" alt="image-<%= formacao.escola %>">
+        </div>
+        <div class="card_content">
+            <h1><%= formacao.escola %></h1>
+        </div>
+        <div class="card_info">
+            <h2><%= formacao.curso %></h2>
+            <p><%= formacao.periodo %></p>
+            <p><%= formacao.data %></p>
+        </div>
     </div>
-    <hr class="my-4">
     <% }) %>
-</div>
+    
+</section>
+
 
 <%- include('footer') %>

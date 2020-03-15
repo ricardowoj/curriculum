@@ -1,25 +1,22 @@
 <%- include('header') %>
 
-
-<div class="experiencia">
+<section class="cards">
     <% experiencias.forEach( experiencia => { %>
-    <div class="container">
-        <div class="media">
-            <img src="images/<%- experiencia.empresa %>.png" class="align-self-center mr-3"
-                alt="imagem-<%- experiencia.empresa %>">
-            <div class="media-body">
-                <h4 class="mt-0"><%- experiencia.empresa %></h4>
-                <p>Cargo: <%- experiencia.cargo %></p>
-                <p class="mb-0"></p>
-            </div>
+    <div class="card">
+        <div class="card_image-container">
+            <img src="images/<%- experiencia.empresa %>.png"
+            alt=" imagem-<%- experiencia.empresa %>">
         </div>
-        <hr class="my-4">
-        <p class="display-6 "><%- experiencia.tempoCargo %></p>
-        <p class="lead"><%- experiencia.descricao %></p>
+        <div class="card_content">
+            <h1><%- experiencia.empresa %></h1>
+        </div>
+        <div class="card_info">
+            <h2>Cargo: <%- experiencia.cargo %></h2>
+            <p id="item-group"><%- experiencia.tempoCargo %></p>
+            <p><%- experiencia.descricao %></p>
+        </div>
     </div>
-    <hr class="my-4">
     <% }) %>
-</div>
-
+</section>
 
 <%- include('footer') %>
